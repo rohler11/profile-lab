@@ -3,11 +3,29 @@
     <p>Use the form below to update your profile.</p>
     <form #profileForm="ngForm" (ngSubmit)="editProfileForm(profileForm)">
       <label class="blue" for="name">Name</label>
-      <input class="input" type="text" name="name" id="name" ngModel />
+      <input
+        class="input"
+        type="text"
+        name="name"
+        id="name"
+        [ngModel]="profiles.name"
+      />
       <label class="blue" for="contact">Contact</label>
-      <input class="input" type="text" name="contact" id="contact" ngModel />
+      <input
+        class="input"
+        type="text"
+        name="contact"
+        id="contact"
+        [ngModel]="profiles.contact"
+      />
       <label class="blue" for="bio">Bio</label>
-      <input class="input" type="text" name="bio" id="bio" ngModel />
+      <input
+        class="input"
+        type="text"
+        name="bio"
+        id="bio"
+        [ngModel]="profiles.bio"
+      />
       <button class="button">Update</button>
     </form>
   </div>
